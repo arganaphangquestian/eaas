@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+  postgres:
+    container_name: postgres
+    hostname: postgres
+    build:
+      context: .
+      dockerfile: ./db.Dockerfile
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: $POSTGRES_DB
+      POSTGRES_USER: $POSTGRES_USER
+      POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+  vault:
+    container_name: vault
+    hostname: vault
+    image: vault:latest
+    ports:
+      - 8200:8200
