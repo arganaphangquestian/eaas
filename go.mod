@@ -7,7 +7,10 @@ require (
 	github.com/jackc/pgconn v1.11.0
 	github.com/jackc/pgtype v1.10.0
 	github.com/jackc/pgx/v4 v4.15.0
+	github.com/joho/godotenv v1.4.0
 )
+
+require github.com/pkg/errors v0.9.1 // indirect
 
 require (
 	github.com/jackc/chunkreader/v2 v2.0.1 // indirect
